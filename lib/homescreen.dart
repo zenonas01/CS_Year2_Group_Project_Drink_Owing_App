@@ -41,7 +41,9 @@ class MyApp extends StatelessWidget {
                 mainAxisSize:MainAxisSize.max,
                 children:[
 
+
                   Container(
+                    padding: EdgeInsets.zero,
                     height:30,
                     width:30,
                     clipBehavior: Clip.antiAlias,
