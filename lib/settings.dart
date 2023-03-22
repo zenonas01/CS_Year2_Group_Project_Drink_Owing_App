@@ -8,6 +8,7 @@ void main() {
   );
 }
 
+
 void setState(Null Function() param0) {
 }
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
             onPressed: () {},
             child:
               Icon(Icons.arrow_back_ios,
-                color:Color(0xff212435),
+                color:Color(0xff352921),
                 size:24,),
           ),
 
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
           MaterialButton(
             onPressed: () {},
             child:
-            Icon(Icons.edit,color:Color(0xff212435),size:24),
+            Icon(Icons.edit,color:Color(0xff352921),size:24),
 
           ),
 
@@ -130,7 +131,7 @@ class MyApp extends StatelessWidget {
 
                           Icon(
                             Icons.call,
-                            color:Color(0xff212435),
+                            color:Color(0xffe3782f),
                             size:24,
                           ),
                           Padding(
@@ -158,7 +159,7 @@ class MyApp extends StatelessWidget {
 
                           Icon(
                             Icons.mail,
-                            color:Color(0xff212435),
+                            color:Color(0xffe3782f),
                             size:24,
                           ),
                           Padding(
@@ -203,7 +204,7 @@ class MyApp extends StatelessWidget {
                                 fontWeight:FontWeight.w700,
                                 fontStyle:FontStyle.normal,
                                 fontSize:20,
-                                color:Color(0xff3a57e8),
+                                color:Color(0xffe3782f),
                               ),
                             ),
                             Padding(
@@ -240,7 +241,7 @@ class MyApp extends StatelessWidget {
 
                           Icon(
                             Icons.favorite_border,
-                            color:Color(0xff3a57e8),
+                            color:Color(0xffe3782f),
                             size:24,
                           ),
                           MaterialButton(
@@ -269,7 +270,7 @@ class MyApp extends StatelessWidget {
 
                           Icon(
                             Icons.credit_card,
-                            color:Color(0xff3a57e8),
+                            color:Color(0xffe3782f),
                             size:24,
                           ),
                           MaterialButton(
@@ -298,7 +299,7 @@ class MyApp extends StatelessWidget {
 
                           Icon(
                             Icons.person,
-                            color:Color(0xff3a57e8),
+                            color:Color(0xffe3782f),
                             size:24,
                           ),
                           MaterialButton(
@@ -327,7 +328,7 @@ class MyApp extends StatelessWidget {
 
                           Icon(
                             Icons.attach_money,
-                            color:Color(0xff3a57e8),
+                            color:Color(0xffe3782f),
                             size:24,
                           ),
                           MaterialButton(
