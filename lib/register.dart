@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'main.dart';
 
-void main() {
-  runApp(
-      const MaterialApp(
-          home: MyApp()
-      )
-  );
+class register extends StatefulWidget {
+  const register({Key? key}) : super(key: key);
+
+  @override
+  registrationState createState() => registrationState();
 }
-
-
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class registrationState extends State<register> {
+  @override
+  void initState() {
+    super.initState();
+  }
+  navigateToHomeOnPush() {
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> MyApp()));
+  }
 
   // This widget is the root of your application.
   @override
@@ -213,7 +216,7 @@ class MyApp extends StatelessWidget {
     Padding(
     padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
     child: MaterialButton(
-    onPressed: () {},
+    onPressed: () {navigateToHomeOnPush();},
     color: Color(0xffff9d2e),
     elevation: 0,
     shape: RoundedRectangleBorder(

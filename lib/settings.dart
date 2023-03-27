@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
       const MaterialApp(
-          home: MyApp()
+          home: MySettings()
       )
   );
 }
@@ -13,8 +13,8 @@ void setState(Null Function() param0) {
 }
 
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MySettings extends StatelessWidget {
+  const MySettings({super.key});
 
   // This widget is the root of your application.
   @override

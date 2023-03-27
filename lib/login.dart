@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'splash.dart';
+import 'register.dart';
+import 'main.dart';
 
-void main() {
-  runApp(
-      const MaterialApp(
-        home: MyApp()
-      )
-  );
+class LogIn extends StatefulWidget {
+  const LogIn({Key? key}) : super(key: key);
+
+  @override
+  LogInState createState() => LogInState();
 }
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class LogInState extends State<LogIn> {
+  @override
+  void initState() {
+    super.initState();
+  }
+  navigateToHomeOnPush() {
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> MyApp()));
+  }
+  navigateToRegistrationOnPush() {
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> register()));
+  }
 
   // This widget is the root of your application.
   @override
@@ -162,7 +172,7 @@ class MyApp extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(0, 16, 10, 30),
                     ),
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {navigateToHomeOnPush();},
                       color: Color(0xffff9d2e),
                       elevation: 0,
                       shape: RoundedRectangleBorder(
@@ -203,7 +213,7 @@ class MyApp extends StatelessWidget {
                           Align(
                             alignment: Alignment(-0.7, 0.77),
                             child: MaterialButton(
-                              onPressed: () {},
+                              onPressed: () {navigateToRegistrationOnPush();},
                               color: Color(0xffff9d2e),
                               elevation: 0,
                               shape: RoundedRectangleBorder(
