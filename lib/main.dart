@@ -1,9 +1,9 @@
-import 'dart:async';
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'login.dart';
 import 'splash.dart';
 import 'settings.dart';
+import 'friends.dart';
+import 'messages.dart';
+import 'groups.dart';
 
 void main() {
   runApp(
@@ -19,9 +19,24 @@ void setState(Null Function() param0) {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  navigateToSettingsOnPush() {
-    Navigator.push(BuildContext as BuildContext, MaterialPageRoute(builder: (context) => MySettings()));
+
+  void navigateToFriendsOnPush(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MyFriends()));
   }
+
+  void navigateToMessagesOnPush(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MyMessages()));
+  }
+
+  void navigateToGroupsOnPush(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MyGroups()));
+  }
+
+  void navigateToSettingsOnPush(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MySettings()));
+  }
+
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -314,7 +329,7 @@ class MyApp extends StatelessWidget {
                     ),
                     child:
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () => navigateToFriendsOnPush(context),
                       padding:EdgeInsets.all(16),
                       child:///***If you have exported images you must have to copy those images in assets/images directory.
                       Image(
@@ -338,7 +353,7 @@ class MyApp extends StatelessWidget {
                     ),
                     child:
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () => navigateToMessagesOnPush(context),
                       padding:EdgeInsets.all(16),
                       child:///***If you have exported images you must have to copy those images in assets/images directory.
                       Image(
@@ -362,7 +377,7 @@ class MyApp extends StatelessWidget {
                     ),
                     child:
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () => navigateToGroupsOnPush(context),
                       padding:EdgeInsets.all(16),
                       child:///***If you have exported images you must have to copy those images in assets/images directory.
                       Image(
@@ -386,7 +401,7 @@ class MyApp extends StatelessWidget {
                     ),
                     child:
                     MaterialButton(
-                      onPressed: () {navigateToSettingsOnPush();},
+                      onPressed: () => navigateToSettingsOnPush(context),
                       padding:EdgeInsets.all(16),
                       child:///***If you have exported images you must have to copy those images in assets/images directory.
                       Image(

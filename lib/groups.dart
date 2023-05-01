@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 void main() {
   runApp(
       const MaterialApp(
-          home: MyApp()
+          home: MyGroups()
       )
   );
 }
 
+
+void navigateToMainOnPush(BuildContext context) {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+}
 
 
 
@@ -18,8 +23,8 @@ void setState(Null Function() param0) {
 
 
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyGroups extends StatelessWidget {
+  const MyGroups({super.key});
 
   // This widget is the root of your application.
   @override
@@ -47,7 +52,7 @@ class MyApp extends StatelessWidget {
         ),
         leading:
         MaterialButton(
-          onPressed: () {},
+          onPressed: () => navigateToMainOnPush(context),
           child:
           Icon(
             Icons.arrow_back,
