@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:postgres/postgres.dart';
 import 'splash.dart';
 import 'settings.dart';
 import 'friends.dart';
@@ -13,11 +14,17 @@ void main() {
   );
 }
 
+
+
+
+
 void setState(Null Function() param0) {
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  String? get usernameInput => null;
 
 
   void navigateToFriendsOnPush(BuildContext context) {
@@ -35,6 +42,18 @@ class MyApp extends StatelessWidget {
   void navigateToSettingsOnPush(BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => MySettings()));
   }
+
+
+
+
+
+  //Database:
+
+
+
+
+
+
 
 
   // This widget is the root of your application.
@@ -80,7 +99,7 @@ class MyApp extends StatelessWidget {
             Padding(
               padding:EdgeInsets.fromLTRB(16, 16, 0, 0),
               child:Text(
-                "Hey 'Name',",
+                'Hey ' + usernameInput! + ',',
                 textAlign: TextAlign.start,
                 overflow:TextOverflow.clip,
                 style:TextStyle(

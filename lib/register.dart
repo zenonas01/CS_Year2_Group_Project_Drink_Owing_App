@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:postgres/postgres.dart';
 import 'login.dart';
 import 'main.dart';
 
-class register extends StatefulWidget {
-  const register({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
   registrationState createState() => registrationState();
 }
-class registrationState extends State<register> {
+class registrationState extends State<Register> {
   @override
   void initState() {
     super.initState();
@@ -16,6 +17,56 @@ class registrationState extends State<register> {
   navigateToHomeOnPush() {
     Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> MyApp()));
   }
+
+
+
+
+
+  // D A T A B A S E
+
+
+
+
+
+
+  Future<void> newrecord() async {
+    final postgres = PostgreSQLConnection(
+      'localhost', // Replace with your PostgreSQL host
+      5432, // Replace with your PostgreSQL port
+      'bartabdb', // Replace with your PostgreSQL database name
+      username: 'postgre', // Replace with your PostgreSQL username
+      password: '1234', // Replace with your PostgreSQL password
+    );
+
+    await postgres.open();
+
+
+    await postgres.query(
+      'INSERT INTO users (name, email, password) VALUES (@name, @email, @password)',
+      substitutionValues: {'name': usernameInput, 'email': useremailInput, 'password': userpsswdInput},
+    );
+
+    await postgres.close();
+  }
+
+
+
+
+
+
+  createNewRecordOnPush() {
+
+  }
+
+
+  ////////////////////////////////////////////////////
+
+  String usernameInput = '';
+  String useremailInput = '';
+  String userpsswdInput = '';
+
+
+  ///////////////////////////////////////////////////
 
   // This widget is the root of your application.
   @override
@@ -57,7 +108,12 @@ class registrationState extends State<register> {
     mainAxisSize: MainAxisSize.max,
     children: [
     TextField(
-    controller: TextEditingController(text: "john"),
+      onChanged: (nametext) {
+        setState(() {
+          usernameInput = nametext;
+        });
+    },
+    //controller: TextEditingController(text: ""),
     obscureText: false,
     textAlign: TextAlign.start,
     maxLines: 1,
@@ -109,8 +165,12 @@ class registrationState extends State<register> {
     Padding(
     padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
     child: TextField(
-    controller:
-    TextEditingController(text: "john@gmail.com"),
+      onChanged: (emailtext) {
+        setState(() {
+          useremailInput = emailtext;
+        });
+      },
+    //controller: TextEditingController(text: "john@gmail.com"),
     obscureText: false,
     textAlign: TextAlign.start,
     maxLines: 1,
@@ -163,7 +223,12 @@ class registrationState extends State<register> {
     Padding(
     padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
     child: TextField(
-    controller: TextEditingController(text: "12345678"),
+      onChanged: (psswdtext) {
+        setState(() {
+          userpsswdInput = psswdtext;
+        });
+      },
+    //controller: TextEditingController(text: "12345678"),
     obscureText: true,
     textAlign: TextAlign.start,
     maxLines: 1,
@@ -216,7 +281,7 @@ class registrationState extends State<register> {
     Padding(
     padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
     child: MaterialButton(
-    onPressed: () {navigateToHomeOnPush();},
+    onPressed: () async {await newrecord(); navigateToHomeOnPush();},
     color: Color(0xffff9d2e),
     elevation: 0,
     shape: RoundedRectangleBorder(
