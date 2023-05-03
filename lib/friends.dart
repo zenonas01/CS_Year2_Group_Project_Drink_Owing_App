@@ -1,19 +1,5 @@
 import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(
-//       const MaterialApp(
-//           home: MyApp()
-//       )
-//   );
-// }
-//
-//
-// void setState(Null Function() param0) {
-// }
-//
-
-
 class Friends extends StatefulWidget {
   const Friends({Key? key}) : super(key: key);
 

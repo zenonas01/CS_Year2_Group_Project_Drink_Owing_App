@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:bartab/groups.dart';
 import 'package:flutter/material.dart';
 import 'friends.dart';
 import 'login.dart';
@@ -36,6 +37,9 @@ class MainState extends State<Main> {
 
   navigateToFriendsOnPush() {
     Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Friends()));
+  }
+  navigateToGroupsOnPush() {
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Groups()));
   }
 
 
@@ -377,7 +381,7 @@ class MainState extends State<Main> {
                     ),
                     child:
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {navigateToGroupsOnPush();},
                       padding:EdgeInsets.all(16),
                       child:///***If you have exported images you must have to copy those images in assets/images directory.
                       Image(
