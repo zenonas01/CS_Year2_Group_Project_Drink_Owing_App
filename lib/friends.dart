@@ -1,31 +1,29 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
 
-void main() {
-  runApp(
-      const MaterialApp(
-          home: MyFriends()
-      )
-  );
+// void main() {
+//   runApp(
+//       const MaterialApp(
+//           home: MyApp()
+//       )
+//   );
+// }
+//
+//
+// void setState(Null Function() param0) {
+// }
+//
+
+
+class Friends extends StatefulWidget {
+  const Friends({Key? key}) : super(key: key);
+
+  @override
+  FriendsState createState() => FriendsState();
 }
 
-
-void navigateToMainOnPush(BuildContext context) {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
-}
-
-
-void setState(Null Function() param0) {
-}
-
-
-class MyFriends extends StatelessWidget {
-  const MyFriends({super.key});
-
-  // This widget is the root of your application.
+class FriendsState extends State<Friends> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Color(0xffebebeb),
       appBar:
@@ -48,14 +46,14 @@ class MyFriends extends StatelessWidget {
         ),
         leading:
         MaterialButton(
-          onPressed: () => navigateToMainOnPush(context),
+          onPressed: () {},
           child:
           Icon(
-          Icons.arrow_back,
-          color:Color(0xff212435),
-          size:24,
+            Icons.arrow_back,
+            color:Color(0xff212435),
+            size:24,
+          ),
         ),
-      ),
       ),
       body:
       ListView(
@@ -138,12 +136,12 @@ class MyFriends extends StatelessWidget {
                   onPressed: () {},
                   padding:EdgeInsets.all(8),
                   child:
-                    Icon(
-                      Icons.more_vert,
-                      color:Color(0xff212435),
-                      size:24,
-                    ),
+                  Icon(
+                    Icons.more_vert,
+                    color:Color(0xff212435),
+                    size:24,
                   ),
+                ),
               ],
             ),
           ),
@@ -615,8 +613,12 @@ class MyFriends extends StatelessWidget {
 
         ],),
     );
-
-
-
+    // Make sure to replace all instances of `context` with `this.context`.
   }
 }
+
+
+
+
+
+

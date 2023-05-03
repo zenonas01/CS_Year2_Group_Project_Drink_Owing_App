@@ -15,7 +15,7 @@ class registrationState extends State<Register> {
     super.initState();
   }
   navigateToHomeOnPush() {
-    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> MyApp()));
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Main()));
   }
 
 

@@ -18,7 +18,7 @@ class LogInState extends State<LogIn> {
     super.initState();
   }
   navigateToHomeOnPush() {
-    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> MyApp()));
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Main()));
   }
   navigateToRegistrationOnPush() {
     Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Register()));

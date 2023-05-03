@@ -1,3 +1,4 @@
+import 'package:bartab/friends.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'main.dart';
@@ -22,7 +23,6 @@ class SplashState extends State<Splash> {
   navigateToLogInOnPush() {
     Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> LogIn()));
   }
-
 
 
   // This widget is the root of your application.
