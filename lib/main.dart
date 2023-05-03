@@ -10,60 +10,16 @@ void main() {
   runApp(const MaterialApp(home: Splash()));
 }
 
-<<<<<<< HEAD
 void setState(Null Function() param0) {}
-=======
-
-
-
-
-void setState(Null Function() param0) {
-}
->>>>>>> 99edfa5110fdb687d1d1998923d06ec1711d0c35
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-<<<<<<< HEAD
   navigateToSettingsOnPush() {
     Navigator.push(BuildContext as BuildContext,
         MaterialPageRoute(builder: (context) => MySettings()));
   }
 
-=======
-  String? get usernameInput => null;
-
-
-  void navigateToFriendsOnPush(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => MyFriends()));
-  }
-
-  void navigateToMessagesOnPush(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => MyMessages()));
-  }
-
-  void navigateToGroupsOnPush(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => MyGroups()));
-  }
-
-  void navigateToSettingsOnPush(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => MySettings()));
-  }
-
-
-
-
-
-  //Database:
-
-
-
-
-
-
-
-
->>>>>>> 99edfa5110fdb687d1d1998923d06ec1711d0c35
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -101,15 +57,9 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Padding(
-<<<<<<< HEAD
               padding: EdgeInsets.fromLTRB(16, 16, 0, 0),
               child: Text(
                 "Hey 'Name',",
-=======
-              padding:EdgeInsets.fromLTRB(16, 16, 0, 0),
-              child:Text(
-                'Hey ' + usernameInput! + ',',
->>>>>>> 99edfa5110fdb687d1d1998923d06ec1711d0c35
                 textAlign: TextAlign.start,
                 overflow: TextOverflow.clip,
                 style: TextStyle(
