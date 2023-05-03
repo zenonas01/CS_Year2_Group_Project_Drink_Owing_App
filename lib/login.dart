@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:postgres/postgres.dart';
 import 'splash.dart';
 import 'register.dart';
 import 'main.dart';
+
+
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
@@ -18,8 +21,12 @@ class LogInState extends State<LogIn> {
     Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> MyApp()));
   }
   navigateToRegistrationOnPush() {
-    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> register()));
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Register()));
   }
+
+
+
+
 
   // This widget is the root of your application.
   @override

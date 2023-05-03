@@ -23,6 +23,8 @@ class SplashState extends State<Splash> {
     Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> LogIn()));
   }
 
+
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

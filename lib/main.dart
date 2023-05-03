@@ -1,24 +1,69 @@
-import 'dart:async';
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'login.dart';
+import 'package:postgres/postgres.dart';
 import 'splash.dart';
 import 'settings.dart';
+import 'friends.dart';
+import 'messages.dart';
+import 'groups.dart';
 
 void main() {
   runApp(const MaterialApp(home: Splash()));
 }
 
+<<<<<<< HEAD
 void setState(Null Function() param0) {}
+=======
+
+
+
+
+void setState(Null Function() param0) {
+}
+>>>>>>> 99edfa5110fdb687d1d1998923d06ec1711d0c35
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+<<<<<<< HEAD
   navigateToSettingsOnPush() {
     Navigator.push(BuildContext as BuildContext,
         MaterialPageRoute(builder: (context) => MySettings()));
   }
 
+=======
+  String? get usernameInput => null;
+
+
+  void navigateToFriendsOnPush(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MyFriends()));
+  }
+
+  void navigateToMessagesOnPush(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MyMessages()));
+  }
+
+  void navigateToGroupsOnPush(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MyGroups()));
+  }
+
+  void navigateToSettingsOnPush(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MySettings()));
+  }
+
+
+
+
+
+  //Database:
+
+
+
+
+
+
+
+
+>>>>>>> 99edfa5110fdb687d1d1998923d06ec1711d0c35
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -56,9 +101,15 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Padding(
+<<<<<<< HEAD
               padding: EdgeInsets.fromLTRB(16, 16, 0, 0),
               child: Text(
                 "Hey 'Name',",
+=======
+              padding:EdgeInsets.fromLTRB(16, 16, 0, 0),
+              child:Text(
+                'Hey ' + usernameInput! + ',',
+>>>>>>> 99edfa5110fdb687d1d1998923d06ec1711d0c35
                 textAlign: TextAlign.start,
                 overflow: TextOverflow.clip,
                 style: TextStyle(
@@ -248,6 +299,7 @@ class MyApp extends StatelessWidget {
                                     color: Color(0xffffffff),
                                   ),
                                 ),
+<<<<<<< HEAD
                               ],
                             ),
                           ),
@@ -255,6 +307,165 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
+=======
+                              ],),),
+                        ],),),
+                  ),
+
+                ],),
+            ),
+            Padding(
+              padding:EdgeInsets.fromLTRB(16, 16, 0, 0),
+              child:Text(
+                "     Friends             Messages           Groups                 More",
+                textAlign: TextAlign.start,
+                overflow:TextOverflow.clip,
+                style:TextStyle(
+                  fontWeight:FontWeight.w700,
+                  fontStyle:FontStyle.normal,
+                  fontSize:14,
+                  color:Color(0xff000000),
+                ),
+              ),
+            ),
+            Container(
+              margin:EdgeInsets.fromLTRB(0, 16, 0, 0),
+              padding:EdgeInsets.all(0),
+              width:MediaQuery.of(context).size.width,
+              height:80,
+              decoration: BoxDecoration(
+                color:Color(0xffffffff),
+                shape:BoxShape.rectangle,
+                borderRadius:BorderRadius.zero,
+                border:Border.all(color:Color(0xfffffcfc),width:1),
+              ),
+              child:
+
+              ListView(
+                scrollDirection: Axis.horizontal,
+                padding:EdgeInsets.symmetric(vertical: 0,horizontal:16),
+                shrinkWrap:true,
+                physics:ClampingScrollPhysics(),
+                children:[
+
+                  Container(
+                    margin:EdgeInsets.all(0),
+                    padding:EdgeInsets.all(0),
+                    width:80,
+                    height:20,
+                    decoration: BoxDecoration(
+                      color:Color(0xffffffff),
+                      shape:BoxShape.rectangle,
+                      borderRadius:BorderRadius.circular(12.0),
+                      border:Border.all(color:Color(0x4d9e9e9e),width:1),
+                    ),
+                    child:
+                    MaterialButton(
+                      onPressed: () => navigateToFriendsOnPush(context),
+                      padding:EdgeInsets.all(16),
+                      child:///***If you have exported images you must have to copy those images in assets/images directory.
+                      Image(
+                        image: AssetImage("assets/images/friends.png"),
+                        height:50,
+                        width:50,
+                        fit:BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin:EdgeInsets.fromLTRB(16, 0, 0, 0),
+                    padding:EdgeInsets.all(0),
+                    width:80,
+                    height:100,
+                    decoration: BoxDecoration(
+                      color:Color(0xffffffff),
+                      shape:BoxShape.rectangle,
+                      borderRadius:BorderRadius.circular(12.0),
+                      border:Border.all(color:Color(0x4d9e9e9e),width:1),
+                    ),
+                    child:
+                    MaterialButton(
+                      onPressed: () => navigateToMessagesOnPush(context),
+                      padding:EdgeInsets.all(16),
+                      child:///***If you have exported images you must have to copy those images in assets/images directory.
+                      Image(
+                        image:AssetImage("assets/images/message.png"),
+                        height:50,
+                        width:50,
+                        fit:BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin:EdgeInsets.fromLTRB(16, 0, 0, 0),
+                    padding:EdgeInsets.all(0),
+                    width:80,
+                    height:100,
+                    decoration: BoxDecoration(
+                      color:Color(0xffffffff),
+                      shape:BoxShape.rectangle,
+                      borderRadius:BorderRadius.circular(12.0),
+                      border:Border.all(color:Color(0x4d9e9e9e),width:1),
+                    ),
+                    child:
+                    MaterialButton(
+                      onPressed: () => navigateToGroupsOnPush(context),
+                      padding:EdgeInsets.all(16),
+                      child:///***If you have exported images you must have to copy those images in assets/images directory.
+                      Image(
+                        image: AssetImage("assets/images/groups.png"),
+                        height:50,
+                        width:50,
+                        fit:BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin:EdgeInsets.fromLTRB(16, 0, 0, 0),
+                    padding:EdgeInsets.all(0),
+                    width:80,
+                    height:100,
+                    decoration: BoxDecoration(
+                      color:Color(0xffffffff),
+                      shape:BoxShape.rectangle,
+                      borderRadius:BorderRadius.circular(12.0),
+                      border:Border.all(color:Color(0x4d9e9e9e),width:1),
+                    ),
+                    child:
+                    MaterialButton(
+                      onPressed: () => navigateToSettingsOnPush(context),
+                      padding:EdgeInsets.all(16),
+                      child:///***If you have exported images you must have to copy those images in assets/images directory.
+                      Image(
+                        image: AssetImage("assets/images/more.png"),
+                        height:50,
+                        width:50,
+                        fit:BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],),
+            ),
+            Padding(
+              padding:EdgeInsets.fromLTRB(16, 16, 0, 16),
+              child:Row(
+                mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                crossAxisAlignment:CrossAxisAlignment.center,
+                mainAxisSize:MainAxisSize.max,
+                children:[
+
+                  Text(
+                    "Transactions",
+                    textAlign: TextAlign.start,
+                    overflow:TextOverflow.clip,
+                    style:TextStyle(
+                      fontWeight:FontWeight.w700,
+                      fontStyle:FontStyle.normal,
+                      fontSize:14,
+                      color:Color(0xff000000),
+                    ),
+                  ),
+>>>>>>> 99edfa5110fdb687d1d1998923d06ec1711d0c35
                 ],
               ),
             ),

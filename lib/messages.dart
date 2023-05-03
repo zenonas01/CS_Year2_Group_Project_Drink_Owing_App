@@ -1,19 +1,30 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 void main() {
   runApp(
       const MaterialApp(
-          home: MyApp()
+          home: MyMessages()
       )
   );
 }
+
+
+
+
+void navigateToMainOnPush(BuildContext context) {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+}
+
+
+
 
 void setState(Null Function() param0) {
 }
 
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyMessages extends StatelessWidget {
+  const MyMessages({super.key});
 
   // This widget is the root of your application.
   @override
@@ -43,7 +54,7 @@ class MyApp extends StatelessWidget {
               mainAxisSize:MainAxisSize.max,
               children:[
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () => navigateToMainOnPush(context),
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child:
                   Icon(

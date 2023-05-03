@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
+
 
 void main() {
   runApp(
@@ -7,6 +9,15 @@ void main() {
       )
   );
 }
+
+
+
+
+void navigateToMainOnPush(BuildContext context) {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+}
+
+
 
 
 void setState(Null Function() param0) {
@@ -36,7 +47,7 @@ class MySettings extends StatelessWidget {
         ),
         leading:
           MaterialButton(
-            onPressed: () {},
+            onPressed: () => navigateToMainOnPush(context),
             child:
               Icon(Icons.arrow_back_ios,
                 color:Color(0xff352921),
