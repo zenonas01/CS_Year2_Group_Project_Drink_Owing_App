@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="BarTab DB on local postgreSQL" uuid="6da821b9-10bd-42b8-a581-9b94d40289c0">
+    <data-source source="LOCAL" name="BarTab DB on local postgreSQL" group="C:\Users\zenne\Desktop\CS_Year2_Group_Project_Drink_Owing_App\lib" uuid="6da821b9-10bd-42b8-a581-9b94d40289c0">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
