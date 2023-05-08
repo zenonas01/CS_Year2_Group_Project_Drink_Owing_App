@@ -281,7 +281,7 @@ class registrationState extends State<Register> {
     Padding(
     padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
     child: MaterialButton(
-    onPressed: () async {await newrecord(); navigateToHomeOnPush();},
+    onPressed: () async {navigateToHomeOnPush(); await newrecord();},
     color: Color(0xffff9d2e),
     elevation: 0,
     shape: RoundedRectangleBorder(
