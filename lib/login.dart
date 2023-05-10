@@ -18,7 +18,7 @@ class LogInState extends State<LogIn> {
     super.initState();
   }
   navigateToHomeOnPush() {
-    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> MyApp()));
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Main()));
   }
   navigateToRegistrationOnPush() {
     Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Register()));
@@ -68,7 +68,7 @@ class LogInState extends State<LogIn> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-    ///***If you have exported images you must have to copy those images in assets/images directory.
+                    ///***If you have exported images you must have to copy those images in assets/images directory.
                     Image(
                       image: AssetImage("assets/images/login.png"),
                       height: 100,
@@ -93,7 +93,7 @@ class LogInState extends State<LogIn> {
                     ),
                     Padding(
                       padding:
-                        EdgeInsets.symmetric(vertical: 16, horizontal: 0),
+                      EdgeInsets.symmetric(vertical: 16, horizontal: 0),
                       child: TextField(
                         controller: TextEditingController(),
                         obscureText: false,
@@ -109,17 +109,17 @@ class LogInState extends State<LogIn> {
                           disabledBorder: UnderlineInputBorder(
                             borderRadius: BorderRadius.circular(4.0),
                             borderSide:
-                              BorderSide(color: Color(0xff000000), width: 1),
+                            BorderSide(color: Color(0xff000000), width: 1),
                           ),
                           focusedBorder: UnderlineInputBorder(
                             borderRadius: BorderRadius.circular(4.0),
                             borderSide:
-                              BorderSide(color: Color(0xff000000), width: 1),
+                            BorderSide(color: Color(0xff000000), width: 1),
                           ),
                           enabledBorder: UnderlineInputBorder(
                             borderRadius: BorderRadius.circular(4.0),
                             borderSide:
-                              BorderSide(color: Color(0xff000000), width: 1),
+                            BorderSide(color: Color(0xff000000), width: 1),
                           ),
                           hintText: "Enter Email",
                           hintStyle: TextStyle(
@@ -150,17 +150,17 @@ class LogInState extends State<LogIn> {
                         disabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(4.0),
                           borderSide:
-                            BorderSide(color: Color(0xff000000), width: 1),
+                          BorderSide(color: Color(0xff000000), width: 1),
                         ),
                         focusedBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(4.0),
                           borderSide:
-                            BorderSide(color: Color(0xff000000), width: 1),
+                          BorderSide(color: Color(0xff000000), width: 1),
                         ),
                         enabledBorder: UnderlineInputBorder(
                           borderRadius: BorderRadius.circular(4.0),
                           borderSide:
-                            BorderSide(color: Color(0xff000000), width: 1),
+                          BorderSide(color: Color(0xff000000), width: 1),
                         ),
                         hintText: "Enter Password",
                         hintStyle: TextStyle(

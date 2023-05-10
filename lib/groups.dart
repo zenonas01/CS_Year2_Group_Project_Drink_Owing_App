@@ -1,35 +1,36 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'package:bartab/main.dart';
 
-void main() {
+/*void main() {
   runApp(
       const MaterialApp(
-          home: MyGroups()
+          home: MyApp()
       )
   );
-}
-
-
-void navigateToMainOnPush(BuildContext context) {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
-}
-
-
-
+}*/
+/*
 void setState(Null Function() param0) {
 }
+*/
 
 
+class Groups extends StatefulWidget {
+  const Groups({Key? key}) : super(key: key);
 
-
-
-class MyGroups extends StatelessWidget {
-  const MyGroups({super.key});
-
-  // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  GroupState createState() => GroupState();
+}
 
+class GroupState extends State<Groups> {
+  @override
+  void initState() {
+    super.initState();
+    //navigateToLogOnTime();
+  }
+  navigateToMainOnPush() {
+    Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context) => Main()));
+  }
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfff7f7f7),
       appBar:
@@ -52,7 +53,7 @@ class MyGroups extends StatelessWidget {
         ),
         leading:
         MaterialButton(
-          onPressed: () => navigateToMainOnPush(context),
+          onPressed: () {navigateToMainOnPush();},
           child:
           Icon(
             Icons.arrow_back,
@@ -404,13 +405,8 @@ class MyGroups extends StatelessWidget {
 
               ],),
           ],),),
-    )
-    ;
-
-
-
-
-
-
+    );
+    // Your existing build method goes here.
+    // Make sure to replace all instances of `context` with `this.context`.
   }
 }

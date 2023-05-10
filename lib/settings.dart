@@ -10,15 +10,9 @@ void main() {
   );
 }
 
-
-
-
 void navigateToMainOnPush(BuildContext context) {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Main()));
 }
-
-
-
 
 void setState(Null Function() param0) {
 }
@@ -46,13 +40,13 @@ class MySettings extends StatelessWidget {
           borderRadius:BorderRadius.zero,
         ),
         leading:
-          MaterialButton(
-            onPressed: () => navigateToMainOnPush(context),
-            child:
-              Icon(Icons.arrow_back_ios,
-                color:Color(0xff352921),
-                size:24,),
-          ),
+        MaterialButton(
+          onPressed: () => navigateToMainOnPush(context),
+          child:
+          Icon(Icons.arrow_back_ios,
+            color:Color(0xff352921),
+            size:24,),
+        ),
 
         actions:[
           MaterialButton(
