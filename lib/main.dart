@@ -7,6 +7,7 @@ import 'login.dart';
 import 'splash.dart';
 import 'settings.dart';
 import 'messages.dart';
+import 'database.sql';
 
 void main() {
   runApp(
