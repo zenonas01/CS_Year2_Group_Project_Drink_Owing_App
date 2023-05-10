@@ -6,6 +6,7 @@ import 'friends.dart';
 import 'login.dart';
 import 'splash.dart';
 import 'settings.dart';
+import 'messages.dart';
 
 void main() {
   runApp(
@@ -40,6 +41,9 @@ class MainState extends State<Main> {
   }
   navigateToGroupsOnPush() {
     Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Groups()));
+  }
+  navigateToMessagesOnPush() {
+    Navigator.push(context as BuildContext,MaterialPageRoute(builder: (context)=> Messages()));
   }
 
 
@@ -357,7 +361,7 @@ class MainState extends State<Main> {
                     ),
                     child:
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {navigateToMessagesOnPush();},
                       padding:EdgeInsets.all(16),
                       child:///***If you have exported images you must have to copy those images in assets/images directory.
                       Image(

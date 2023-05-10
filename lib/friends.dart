@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
+
 
 class Friends extends StatefulWidget {
   const Friends({Key? key}) : super(key: key);
@@ -9,6 +11,13 @@ class Friends extends StatefulWidget {
 
 class FriendsState extends State<Friends> {
   @override
+  void initState() {
+    super.initState();
+    //navigateToLogOnTime();
+  }
+  navigateToMainOnPush() {
+    Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context) => Main()));
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffebebeb),
@@ -32,7 +41,7 @@ class FriendsState extends State<Friends> {
         ),
         leading:
         MaterialButton(
-          onPressed: () {},
+          onPressed: () {navigateToMainOnPush();},
           child:
           Icon(
             Icons.arrow_back,

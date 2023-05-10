@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:bartab/main.dart';
 
 /*void main() {
   runApp(
@@ -21,8 +22,14 @@ class Groups extends StatefulWidget {
 }
 
 class GroupState extends State<Groups> {
-
   @override
+  void initState() {
+    super.initState();
+    //navigateToLogOnTime();
+  }
+  navigateToMainOnPush() {
+    Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context) => Main()));
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xfff7f7f7),
@@ -46,7 +53,7 @@ class GroupState extends State<Groups> {
         ),
         leading:
         MaterialButton(
-          onPressed: () {},
+          onPressed: () {navigateToMainOnPush();},
           child:
           Icon(
             Icons.arrow_back,

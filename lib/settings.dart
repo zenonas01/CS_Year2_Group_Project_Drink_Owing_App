@@ -10,15 +10,9 @@ void main() {
   );
 }
 
-
-
-
 void navigateToMainOnPush(BuildContext context) {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Main()));
 }
-
-
-
 
 void setState(Null Function() param0) {
 }
