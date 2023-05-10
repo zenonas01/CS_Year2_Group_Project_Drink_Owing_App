@@ -8,6 +8,8 @@ import 'splash.dart';
 import 'settings.dart';
 import 'messages.dart';
 import 'database.sql';
+import 'package:postgres/postgres.dart';
+
 
 void main() {
   runApp(

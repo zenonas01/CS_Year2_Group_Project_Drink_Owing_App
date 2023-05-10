@@ -3,6 +3,7 @@ import 'package:postgres/postgres.dart';
 import 'login.dart';
 import 'main.dart';
 
+
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
 
@@ -25,29 +26,6 @@ class registrationState extends State<Register> {
   // D A T A B A S E
 
 
-
-
-
-
-  Future<void> newrecord() async {
-    final postgres = PostgreSQLConnection(
-      'localhost', // Replace with your PostgreSQL host
-      5432, // Replace with your PostgreSQL port
-      'bartabdb', // Replace with your PostgreSQL database name
-      username: 'postgre', // Replace with your PostgreSQL username
-      password: '1234', // Replace with your PostgreSQL password
-    );
-
-    await postgres.open();
-
-
-    await postgres.query(
-      'INSERT INTO users (name, email, password) VALUES (@name, @email, @password)',
-      substitutionValues: {'name': usernameInput, 'email': useremailInput, 'password': userpsswdInput},
-    );
-
-    await postgres.close();
-  }
 
 
 
@@ -281,7 +259,7 @@ class registrationState extends State<Register> {
                       Padding(
                         padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                         child: MaterialButton(
-                          onPressed: () async {await newrecord(); navigateToHomeOnPush();},
+                          onPressed: () async {navigateToHomeOnPush();},
                           color: Color(0xffff9d2e),
                           elevation: 0,
                           shape: RoundedRectangleBorder(
